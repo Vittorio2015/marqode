@@ -1,0 +1,2098 @@
+<!-- Current code at https://marqode.github.io/lessons -->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Marc Bucchieri</title>
+    <script
+        type="text/javascript">!function (i) { if (i.search) { var l = {}; i.search.slice(1).split("&").forEach(function (i) { var a = i.split("="); l[a[0]] = a.slice(1).join("=").replace(/~and~/g, "&") }), void 0 !== l.p && window.history.replaceState(null, null, i.pathname.slice(0, -1) + (l.p || "") + (l.q ? "?" + l.q : "") + i.hash) } }(window.location)</script>
+    <style type="text/css">
+        svg:not(:root).svg-inline--fa {
+            overflow: visible;
+        }
+
+        .svg-inline--fa {
+            display: inline-block;
+            font-size: inherit;
+            height: 1em;
+            overflow: visible;
+            vertical-align: -0.125em;
+        }
+
+        .svg-inline--fa.fa-lg {
+            vertical-align: -0.225em;
+        }
+
+        .svg-inline--fa.fa-w-1 {
+            width: 0.0625em;
+        }
+
+        .svg-inline--fa.fa-w-2 {
+            width: 0.125em;
+        }
+
+        .svg-inline--fa.fa-w-3 {
+            width: 0.1875em;
+        }
+
+        .svg-inline--fa.fa-w-4 {
+            width: 0.25em;
+        }
+
+        .svg-inline--fa.fa-w-5 {
+            width: 0.3125em;
+        }
+
+        .svg-inline--fa.fa-w-6 {
+            width: 0.375em;
+        }
+
+        .svg-inline--fa.fa-w-7 {
+            width: 0.4375em;
+        }
+
+        .svg-inline--fa.fa-w-8 {
+            width: 0.5em;
+        }
+
+        .svg-inline--fa.fa-w-9 {
+            width: 0.5625em;
+        }
+
+        .svg-inline--fa.fa-w-10 {
+            width: 0.625em;
+        }
+
+        .svg-inline--fa.fa-w-11 {
+            width: 0.6875em;
+        }
+
+        .svg-inline--fa.fa-w-12 {
+            width: 0.75em;
+        }
+
+        .svg-inline--fa.fa-w-13 {
+            width: 0.8125em;
+        }
+
+        .svg-inline--fa.fa-w-14 {
+            width: 0.875em;
+        }
+
+        .svg-inline--fa.fa-w-15 {
+            width: 0.9375em;
+        }
+
+        .svg-inline--fa.fa-w-16 {
+            width: 1em;
+        }
+
+        .svg-inline--fa.fa-w-17 {
+            width: 1.0625em;
+        }
+
+        .svg-inline--fa.fa-w-18 {
+            width: 1.125em;
+        }
+
+        .svg-inline--fa.fa-w-19 {
+            width: 1.1875em;
+        }
+
+        .svg-inline--fa.fa-w-20 {
+            width: 1.25em;
+        }
+
+        .svg-inline--fa.fa-pull-left {
+            margin-right: 0.3em;
+            width: auto;
+        }
+
+        .svg-inline--fa.fa-pull-right {
+            margin-left: 0.3em;
+            width: auto;
+        }
+
+        .svg-inline--fa.fa-border {
+            height: 1.5em;
+        }
+
+        .svg-inline--fa.fa-li {
+            width: 2em;
+        }
+
+        .svg-inline--fa.fa-fw {
+            width: 1.25em;
+        }
+
+        .fa-layers svg.svg-inline--fa {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .fa-layers {
+            display: inline-block;
+            height: 1em;
+            position: relative;
+            text-align: center;
+            vertical-align: -0.125em;
+            width: 1em;
+        }
+
+        .fa-layers svg.svg-inline--fa {
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+        }
+
+        .fa-layers-counter,
+        .fa-layers-text {
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+        }
+
+        .fa-layers-text {
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+        }
+
+        .fa-layers-counter {
+            background-color: #ff253a;
+            border-radius: 1em;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #fff;
+            height: 1.5em;
+            line-height: 1;
+            max-width: 5em;
+            min-width: 1.5em;
+            overflow: hidden;
+            padding: 0.25em;
+            right: 0;
+            text-overflow: ellipsis;
+            top: 0;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: top right;
+            transform-origin: top right;
+        }
+
+        .fa-layers-bottom-right {
+            bottom: 0;
+            right: 0;
+            top: auto;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+        }
+
+        .fa-layers-bottom-left {
+            bottom: 0;
+            left: 0;
+            right: auto;
+            top: auto;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+        }
+
+        .fa-layers-top-right {
+            right: 0;
+            top: 0;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: top right;
+            transform-origin: top right;
+        }
+
+        .fa-layers-top-left {
+            left: 0;
+            right: auto;
+            top: 0;
+            -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+        }
+
+        .fa-lg {
+            font-size: 1.3333333333em;
+            line-height: 0.75em;
+            vertical-align: -0.0667em;
+        }
+
+        .fa-xs {
+            font-size: 0.75em;
+        }
+
+        .fa-sm {
+            font-size: 0.875em;
+        }
+
+        .fa-1x {
+            font-size: 1em;
+        }
+
+        .fa-2x {
+            font-size: 2em;
+        }
+
+        .fa-3x {
+            font-size: 3em;
+        }
+
+        .fa-4x {
+            font-size: 4em;
+        }
+
+        .fa-5x {
+            font-size: 5em;
+        }
+
+        .fa-6x {
+            font-size: 6em;
+        }
+
+        .fa-7x {
+            font-size: 7em;
+        }
+
+        .fa-8x {
+            font-size: 8em;
+        }
+
+        .fa-9x {
+            font-size: 9em;
+        }
+
+        .fa-10x {
+            font-size: 10em;
+        }
+
+        .fa-fw {
+            text-align: center;
+            width: 1.25em;
+        }
+
+        .fa-ul {
+            list-style-type: none;
+            margin-left: 2.5em;
+            padding-left: 0;
+        }
+
+        .fa-ul>li {
+            position: relative;
+        }
+
+        .fa-li {
+            left: -2em;
+            position: absolute;
+            text-align: center;
+            width: 2em;
+            line-height: inherit;
+        }
+
+        .fa-border {
+            border: solid 0.08em #eee;
+            border-radius: 0.1em;
+            padding: 0.2em 0.25em 0.15em;
+        }
+
+        .fa-pull-left {
+            float: left;
+        }
+
+        .fa-pull-right {
+            float: right;
+        }
+
+        .fa.fa-pull-left,
+        .fas.fa-pull-left,
+        .far.fa-pull-left,
+        .fal.fa-pull-left,
+        .fab.fa-pull-left {
+            margin-right: 0.3em;
+        }
+
+        .fa.fa-pull-right,
+        .fas.fa-pull-right,
+        .far.fa-pull-right,
+        .fal.fa-pull-right,
+        .fab.fa-pull-right {
+            margin-left: 0.3em;
+        }
+
+        .fa-spin {
+            -webkit-animation: fa-spin 2s infinite linear;
+            animation: fa-spin 2s infinite linear;
+        }
+
+        .fa-pulse {
+            -webkit-animation: fa-spin 1s infinite steps(8);
+            animation: fa-spin 1s infinite steps(8);
+        }
+
+        @-webkit-keyframes fa-spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fa-spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .fa-rotate-90 {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .fa-rotate-180 {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .fa-rotate-270 {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+            -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+        }
+
+        .fa-flip-horizontal {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+            -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+        }
+
+        .fa-flip-vertical {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+            -webkit-transform: scale(1, -1);
+            transform: scale(1, -1);
+        }
+
+        .fa-flip-both,
+        .fa-flip-horizontal.fa-flip-vertical {
+            -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+            -webkit-transform: scale(-1, -1);
+            transform: scale(-1, -1);
+        }
+
+        :root .fa-rotate-90,
+        :root .fa-rotate-180,
+        :root .fa-rotate-270,
+        :root .fa-flip-horizontal,
+        :root .fa-flip-vertical,
+        :root .fa-flip-both {
+            -webkit-filter: none;
+            filter: none;
+        }
+
+        .fa-stack {
+            display: inline-block;
+            height: 2em;
+            position: relative;
+            width: 2.5em;
+        }
+
+        .fa-stack-1x,
+        .fa-stack-2x {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .svg-inline--fa.fa-stack-1x {
+            height: 1em;
+            width: 1.25em;
+        }
+
+        .svg-inline--fa.fa-stack-2x {
+            height: 2em;
+            width: 2.5em;
+        }
+
+        .fa-inverse {
+            color: #fff;
+        }
+
+        .sr-only {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .sr-only-focusable:active,
+        .sr-only-focusable:focus {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+
+        .svg-inline--fa .fa-primary {
+            fill: var(--fa-primary-color, currentColor);
+            opacity: 1;
+            opacity: var(--fa-primary-opacity, 1);
+        }
+
+        .svg-inline--fa .fa-secondary {
+            fill: var(--fa-secondary-color, currentColor);
+            opacity: 0.4;
+            opacity: var(--fa-secondary-opacity, 0.4);
+        }
+
+        .svg-inline--fa.fa-swap-opacity .fa-primary {
+            opacity: 0.4;
+            opacity: var(--fa-secondary-opacity, 0.4);
+        }
+
+        .svg-inline--fa.fa-swap-opacity .fa-secondary {
+            opacity: 1;
+            opacity: var(--fa-primary-opacity, 1);
+        }
+
+        .svg-inline--fa mask .fa-primary,
+        .svg-inline--fa mask .fa-secondary {
+            fill: black;
+        }
+
+        .fad.fa-inverse {
+            color: #fff;
+        }
+    </style>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/main.2c06facc5793b571773c.css" rel="stylesheet">
+    <style id="cvox_indicator_style">
+        .cvox_indicator_container {
+            position: absolute !important;
+            left: 0 !important;
+            top: 0 !important;
+            z-index: 2147483647 !important;
+            pointer-events: none !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .cvox_indicator_window_not_focused {
+            visibility: hidden !important;
+        }
+
+        .cvox_indicator_pulsing {
+            -webkit-animation: cvox_indicator_pulsing_animation 0s 2 alternate !important;
+            -webkit-animation-timing-function: ease-in-out !important;
+        }
+
+        .cvox_indicator_region {
+            opacity: 0 !important;
+            -webkit-transition: opacity 1s !important;
+        }
+
+        .cvox_indicator_visible {
+            opacity: 1 !important;
+        }
+
+        .cvox_indicator_container .cvox_indicator_region * {
+            position: absolute !important;
+            box-shadow: 0 0 4px 4px #f7983a !important;
+            border-radius: 6px !important;
+            margin: 0px !important;
+            padding: 0px !important;
+            -webkit-transition: none !important;
+        }
+
+        .cvox_indicator_animate_normal .cvox_indicator_region * {
+            -webkit-transition: all 0.3s !important;
+        }
+
+        .cvox_indicator_animate_quick .cvox_indicator_region * {
+            -webkit-transition: all 0.1s !important;
+        }
+
+        .cvox_indicator_top {
+            border-radius: inherit inherit 0 0 !important;
+        }
+
+        .cvox_indicator_middle_nw {
+            border-radius: inherit 0 0 0 !important;
+        }
+
+        .cvox_indicator_middle_ne {
+            border-radius: 0 inherit 0 0 !important;
+        }
+
+        .cvox_indicator_middle_se {
+            border-radius: 0 0 inherit 0 !important;
+        }
+
+        .cvox_indicator_middle_sw {
+            border-radius: 0 0 0 inherit !important;
+        }
+
+        .cvox_indicator_bottom {
+            border-radius: 0 0 inherit inherit !important;
+        }
+
+        @-webkit-keyframes cvox_indicator_pulsing_animation {
+            0% {
+                opacity: 1.0
+            }
+
+            50% {
+                opacity: 0.5
+            }
+
+            100% {
+                opacity: 1.0
+            }
+        }
+    </style>
+    <script type="text/javascript" mathjax="1">// Copyright 2013 Google Inc.
+        //
+        // Licensed under the Apache License, Version 2.0 (the "License");
+        // you may not use this file except in compliance with the License.
+        // You may obtain a copy of the License at
+        //
+        //      http://www.apache.org/licenses/LICENSE-2.0
+        //
+        // Unless required by applicable law or agreed to in writing, software
+        // distributed under the License is distributed on an "AS IS" BASIS,
+        // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        // See the License for the specific language governing permissions and
+        // limitations under the License.
+
+        /**
+         * @fileoverview Utility functions for the MathJax bridge. It contains
+         * functionality that changes the normal behaviour of MathJax contributed by
+         * Davide Cervone (dpvc@union.edu) and adapted by Volker Sorge
+         * (sorge@google.com).
+         * This is the only file that should contain actual MathJax code!
+         *
+         */
+
+        if (typeof (goog) != 'undefined' && goog.provide) {
+            goog.provide('cvox.MathJaxExternalUtil');
+        }
+
+
+        if (!window['cvox']) {
+            window['cvox'] = {};
+        }
+
+        /**
+         * @constructor
+         */
+        cvox.MathJaxExternalUtil = function () {
+        };
+
+
+        /**
+         * Returns a string with Mathml attributes for a MathJax object.  This serves as
+         * intermediate store for the original function when we temporarily change
+         * MathJax's output behaviour.
+         * @return {string}
+         */
+        cvox.MathJaxExternalUtil.mmlAttr = function () {
+            return '';
+        };
+
+
+        /**
+         * Rewrites an mfenced expression internally in MathJax to a corresponding mrow.
+         * @param {?string} space The separator expression.
+         * @return {string} The new mrow expression as a string.
+         * @this {MathJax.RootElement}
+         */
+        cvox.MathJaxExternalUtil.mfenced = function (space) {
+            if (space == null) {
+                space = '';
+            }
+            var mml = [space + '<mrow mfenced="true"' +
+                this.toMathMLattributes() + '>'];
+            var mspace = space + '  ';
+            if (this.data.open) {
+                mml.push(this.data.open.toMathML(mspace));
+            }
+            if (this.data[0] != null) {
+                mml.push(this.data[0].toMathML(mspace));
+            }
+            for (var i = 1, m = this.data.length; i < m; i++) {
+                if (this.data[i]) {
+                    if (this.data['sep' + i]) {
+                        mml.push(this.data['sep' + i].toMathML(mspace));
+                    }
+                    mml.push(this.data[i].toMathML(mspace));
+                }
+            }
+            if (this.data.close) {
+                mml.push(this.data.close.toMathML(mspace));
+            }
+            mml.push(space + '</mrow>');
+            return mml.join('\n');
+        };
+
+
+        /**
+         * Compute the MathML representation of a MathJax element.
+         * @param {MathJax.Jax} jax MathJax object.
+         * @param {function(string)} callback Callback function.
+         * @return {Function} Callback function for restart.
+         * @this {cvox.MathJaxExternalUtil}
+         */
+        cvox.MathJaxExternalUtil.getMathml = function (jax, callback) {
+            var mbaseProt = MathJax.ElementJax.mml.mbase.prototype;
+            var mfencedProt = MathJax.ElementJax.mml.mfenced.prototype;
+            this.mmlAttr = mbaseProt.toMathMLattributes;
+            var mfenced = mfencedProt.toMathML;
+            try {
+                mbaseProt.toMathMLattributes = cvox.MathJaxExternalUtil.mbase;
+                mfencedProt.toMathML = cvox.MathJaxExternalUtil.mfenced;
+                var mml = jax.root.toMathML('');
+                mbaseProt.toMathMLattributes = this.mmlAttr;
+                mfencedProt.toMathML = mfenced;
+                MathJax.Callback(callback)(mml);
+            } catch (err) {
+                mbaseProt.toMathMLattributes = this.mmlAttr;
+                mfencedProt.toMathML = mfenced;
+                if (!err['restart']) {
+                    throw err;
+                }
+                return MathJax.Callback.After(
+                    [cvox.MathJaxExternalUtil.getMathml, jax, callback], err['restart']);
+            }
+        };
+
+
+        /**
+         * Compute the special span ID attribute.
+         * @return {string} The MathJax spanID attribute string.
+         * @this {MathJax.RootElement}
+         */
+        cvox.MathJaxExternalUtil.mbase = function () {
+            var attr = cvox.MathJaxExternalUtil.mmlAttr.call(this);
+            if (this.spanID != null) {
+                var id = (this.id || 'MathJax-Span-' + this.spanID) +
+                    MathJax.OutputJax['HTML-CSS']['idPostfix'];
+                attr += ' spanID="' + id + '"';
+            }
+            if (this.texClass != null) {
+                attr += ' texClass="' + this.texClass + '"';
+            }
+            return attr;
+        };
+
+
+        /**
+         * Test that ensures that all important parts of MathJax have been initialized
+         * at startup.
+         * @return {boolean} True if MathJax is sufficiently initialised.
+         */
+        cvox.MathJaxExternalUtil.isActive = function () {
+            return typeof (MathJax) != 'undefined' &&
+                typeof (MathJax.Hub) != 'undefined' &&
+                typeof (MathJax.ElementJax) != 'undefined' &&
+                typeof (MathJax.InputJax) != 'undefined';
+        };
+
+
+        /**
+         * Constructs a callback for a MathJax object with the purpose of returning the
+         * MathML representation of a particular jax given by its node id. The callback
+         * can be used by functions passing it to MathJax functions and is invoked by
+         * MathJax.
+         * @param {function(string, string)} callback A function taking a MathML
+         * expression and an id string.
+         * @param {MathJax.Jax} jax The MathJax object.
+         * @private
+         */
+        cvox.MathJaxExternalUtil.getMathjaxCallback_ = function (callback, jax) {
+            cvox.MathJaxExternalUtil.getMathml(
+                jax,
+                function (mml) {
+                    if (jax.root.inputID) {
+                        callback(mml, jax.root.inputID);
+                    }
+                });
+        };
+
+
+        /**
+         * Registers a callback for a particular Mathjax signal.
+         * @param {function(string, string)} callback A function taking an MathML
+         * expression and an id string.
+         * @param {string} signal The Mathjax signal on which to fire the callback.
+         */
+        cvox.MathJaxExternalUtil.registerSignal = function (callback, signal) {
+            MathJax.Hub.Register.MessageHook(
+                signal,
+                function (signalAndIdPair) {
+                    var jax = MathJax.Hub.getJaxFor(signalAndIdPair[1]);
+                    cvox.MathJaxExternalUtil.getMathjaxCallback_(callback, jax);
+                });
+        };
+
+
+        /**
+         * Compute the MathML representation for all currently available MathJax
+         * nodes.
+         * @param {function(string, string)} callback A function taking a MathML
+         * expression and an id string.
+         */
+        cvox.MathJaxExternalUtil.getAllJax = function (callback) {
+            var jaxs = MathJax.Hub.getAllJax();
+            if (jaxs) {
+                jaxs.forEach(function (jax) {
+                    if (jax.root.spanID) {
+                        cvox.MathJaxExternalUtil.getMathjaxCallback_(callback, jax);
+                    }
+                });
+            }
+        };
+
+
+        // Functionality for direct translation from LaTeX to MathML without rendering.
+        /**
+         * Injects a MathJax config script into the page.
+         * This script is picked up by MathJax at load time. It only runs in the page,
+         * thus in case it causes an exception it will not crash ChromeVox. The worst
+         * thing that can happen is that we do not get a MathML object for some
+         * LaTeX alternative text, i.e., we default to the usual behaviour of simply
+         * reading out the alt text directly.
+         */
+        cvox.MathJaxExternalUtil.injectConfigScript = function () {
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/x-mathjax-config');
+            script.textContent =
+                'MathJax.Hub.Config({\n' +
+                // No output needed.
+                '  jax: ["input/AsciiMath", "input/TeX"],\n' +
+                // Load functionality for MathML translation.
+                '  extensions: ["toMathML.js"],\n' +
+                // Do not change any rendering in the page.
+                '  skipStartupTypeset: true,\n' +
+                // Do not display any MathJax status message.
+                '  messageStyle: "none",\n' +
+                // Load AMS math extensions.
+                '  TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}\n' +
+                '});\n' +
+                'MathJax.Hub.Queue(\n' +
+                // Force InputJax to load.
+                '  function() {MathJax.Hub.inputJax["math/asciimath"].Process();\n' +
+                '  MathJax.Hub.inputJax["math/tex"].Process()}\n' +
+                ');\n' +
+                '//\n' +
+                '// Prevent these from being loaded\n' +
+                '//\n' +
+                // Make sure that no pop up menu is created for the jax.
+                'if (!MathJax.Extension.MathMenu) {MathJax.Extension.MathMenu = {}};\n' +
+                // Make sure that jax is created unzoomed.
+                'if (!MathJax.Extension.MathZoom) {MathJax.Extension.MathZoom = {}};';
+            document.activeElement.appendChild(script);
+        };
+
+
+        /**
+         * Injects a MathJax load script into the page. This should only be injected
+         * after the config script. While the config script can adapted for different
+         * pages, the load script is generic.
+         *
+         */
+        cvox.MathJaxExternalUtil.injectLoadScript = function () {
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            var protocol = location.protocol == 'https:' ? 'https' : 'http';
+            script.setAttribute(
+                'src', protocol + '://cdn.mathjax.org/mathjax/latest/MathJax.js');
+            document.activeElement.appendChild(script);
+        };
+
+
+        /**
+         * Configures MathJax for MediaWiki pages (e.g., Wikipedia) by adding
+         * some special mappings to MathJax's symbol definitions. The function
+         * can only be successfully executed, once MathJax is injected and
+         * configured in the page.
+         */
+        // Adapted from
+        // https://en.wikipedia.org/wiki/User:Nageh/mathJax/config/TeX-AMS-texvc_HTML.js
+        cvox.MathJaxExternalUtil.configMediaWiki = function () {
+            if (mediaWiki) {
+                MathJax.Hub.Register.StartupHook(
+                    'TeX Jax Ready', function () {
+                        var MML = MathJax.ElementJax.mml;
+                        MathJax.Hub.Insert(
+                            MathJax.InputJax.TeX.Definitions,
+                            {
+                                mathchar0mi: {
+                                    thetasym: '03B8',
+                                    koppa: '03DF',
+                                    stigma: '03DB',
+                                    varstigma: '03DB',
+                                    coppa: '03D9',
+                                    varcoppa: '03D9',
+                                    sampi: '03E1',
+                                    C: ['0043', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    cnums: ['0043', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    Complex: ['0043', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    H: ['210D', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    N: ['004E', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    natnums: ['004E', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    Q: ['0051', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    R: ['0052', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    reals: ['0052', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    Reals: ['0052', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    Z: ['005A', { mathvariant: MML.VARIANT.DOUBLESTRUCK }],
+                                    sect: '00A7',
+                                    P: '00B6',
+                                    AA: ['00C5', { mathvariant: MML.VARIANT.NORMAL }],
+                                    alef: ['2135', { mathvariant: MML.VARIANT.NORMAL }],
+                                    alefsym: ['2135', { mathvariant: MML.VARIANT.NORMAL }],
+                                    weierp: ['2118', { mathvariant: MML.VARIANT.NORMAL }],
+                                    real: ['211C', { mathvariant: MML.VARIANT.NORMAL }],
+                                    part: ['2202', { mathvariant: MML.VARIANT.NORMAL }],
+                                    infin: ['221E', { mathvariant: MML.VARIANT.NORMAL }],
+                                    empty: ['2205', { mathvariant: MML.VARIANT.NORMAL }],
+                                    O: ['2205', { mathvariant: MML.VARIANT.NORMAL }],
+                                    ang: ['2220', { mathvariant: MML.VARIANT.NORMAL }],
+                                    exist: ['2203', { mathvariant: MML.VARIANT.NORMAL }],
+                                    clubs: ['2663', { mathvariant: MML.VARIANT.NORMAL }],
+                                    diamonds: ['2662', { mathvariant: MML.VARIANT.NORMAL }],
+                                    hearts: ['2661', { mathvariant: MML.VARIANT.NORMAL }],
+                                    spades: ['2660', { mathvariant: MML.VARIANT.NORMAL }],
+                                    textvisiblespace: '2423',
+                                    geneuro: '20AC',
+                                    euro: '20AC'
+                                },
+                                mathchar0mo: {
+                                    and: '2227',
+                                    or: '2228',
+                                    bull: '2219',
+                                    plusmn: '00B1',
+                                    sdot: '22C5',
+                                    Dagger: '2021',
+                                    sup: '2283',
+                                    sub: '2282',
+                                    supe: '2287',
+                                    sube: '2286',
+                                    isin: '2208',
+                                    hAar: '21D4',
+                                    hArr: '21D4',
+                                    Harr: '21D4',
+                                    Lrarr: '21D4',
+                                    lrArr: '21D4',
+                                    lArr: '21D0',
+                                    Larr: '21D0',
+                                    rArr: '21D2',
+                                    Rarr: '21D2',
+                                    harr: '2194',
+                                    lrarr: '2194',
+                                    larr: '2190',
+                                    gets: '2190',
+                                    rarr: '2192',
+                                    oiint: ['222F', { texClass: MML.TEXCLASS.OP }],
+                                    oiiint: ['2230', { texClass: MML.TEXCLASS.OP }]
+                                },
+                                mathchar7: {
+                                    Alpha: '0391',
+                                    Beta: '0392',
+                                    Epsilon: '0395',
+                                    Zeta: '0396',
+                                    Eta: '0397',
+                                    Iota: '0399',
+                                    Kappa: '039A',
+                                    Mu: '039C',
+                                    Nu: '039D',
+                                    Omicron: '039F',
+                                    Rho: '03A1',
+                                    Tau: '03A4',
+                                    Chi: '03A7',
+                                    Koppa: '03DE',
+                                    Stigma: '03DA',
+                                    Digamma: '03DC',
+                                    Coppa: '03D8',
+                                    Sampi: '03E0'
+                                },
+                                delimiter: {
+                                    '\\uarr': '2191',
+                                    '\\darr': '2193',
+                                    '\\Uarr': '21D1',
+                                    '\\uArr': '21D1',
+                                    '\\Darr': '21D3',
+                                    '\\dArr': '21D3',
+                                    '\\rang': '27E9',
+                                    '\\lang': '27E8'
+                                },
+                                macros: {
+                                    sgn: 'NamedFn',
+                                    arccot: 'NamedFn',
+                                    arcsec: 'NamedFn',
+                                    arccsc: 'NamedFn',
+                                    sen: 'NamedFn',
+                                    image: ['Macro', '\\Im'],
+                                    bold: ['Macro', '\\mathbf{#1}', 1],
+                                    pagecolor: ['Macro', '', 1],
+                                    emph: ['Macro', '\\textit{#1}', 1],
+                                    textsf: ['Macro', '\\mathord{\\sf{\\text{#1}}}', 1],
+                                    texttt: ['Macro', '\\mathord{\\tt{\\text{#1}}}', 1],
+                                    vline: ['Macro', '\\smash{\\large\\lvert}', 0]
+                                }
+                            });
+                    });
+            }
+        };
+
+
+        /**
+         * Converts an expression into MathML string.
+         * @param {function(string)} callback Callback function called with the MathML
+         * string after it is produced.
+         * @param {string} math The math Expression.
+         * @param {string} typeString Type of the expression to be converted (e.g.,
+         * "math/tex", "math/asciimath")
+         * @param {string} filterString Name of object specifying the filters to be used
+         * by MathJax (e.g., TeX, AsciiMath)
+         * @param {string} errorString Name of the error object used by MathJax (e.g.,
+         * texError, asciimathError).
+         * @param {!function(string)} parseFunction The MathJax function used for
+         * parsing the particular expression. This depends on the kind of expression we
+         * have.
+         * @return {Function} If a restart occurs, the callback for it is
+         * returned, so this can be used in MathJax.Hub.Queue() calls reliably.
+         */
+        cvox.MathJaxExternalUtil.convertToMml = function (
+            callback, math, typeString, filterString, errorString, parseFunction) {
+            //  Make a fake script and pass it to the pre-filters.
+            var script = MathJax.HTML.Element('script', { type: typeString }, [math]);
+            var data = { math: math, script: script };
+            MathJax.InputJax[filterString].prefilterHooks.Execute(data);
+
+            //  Attempt to parse the code, processing any errors.
+            var mml;
+            try {
+                mml = parseFunction(data.math);
+            } catch (err) {
+                if (err[errorString]) {
+                    // Put errors into <merror> tags.
+                    mml = MathJax.ElementJax.mml.merror(err.message.replace(/\n.*/, ''));
+                } else if (err['restart']) {
+                    //  Wait for file to load, then do this routine again.
+                    return MathJax.Callback.After(
+                        [cvox.MathJaxExternalUtil.convertToMml, callback, math,
+                            typeString, filterString, errorString, parseFunction],
+                        err['restart']);
+                } else {
+                    //  It's an actual error, so pass it on.
+                    throw err;
+                }
+            }
+
+            //  Make an ElementJax from the tree, call the post-filters, and get the
+            //  MathML.
+            if (mml.inferred) {
+                mml = MathJax.ElementJax.mml.apply(MathJax.ElementJax, mml.data);
+            } else {
+                mml = MathJax.ElementJax.mml(mml);
+            }
+            mml.root.display = 'block';
+            data.math = mml;
+            // This is necessary to make this function work even if MathJax is already
+            // properly injected into the page, as this object is used in MathJax's
+            // AMSmath.js file.
+            data.script['MathJax'] = {};
+            MathJax.InputJax[filterString].postfilterHooks.Execute(data);
+            return cvox.MathJaxExternalUtil.getMathml(data.math, callback);
+        };
+
+
+        /**
+         * Converts a LaTeX expression into MathML string.
+         * @param {function(string)} callback Callback function called with the MathML
+         * string after it is produced.
+         * @param {string} math Expression latex.
+         */
+        cvox.MathJaxExternalUtil.texToMml = function (callback, math) {
+            cvox.MathJaxExternalUtil.convertToMml(
+                callback, math, 'math/tex;mode=display', 'TeX', 'texError',
+                function (data) { return MathJax.InputJax.TeX.Parse(data).mml(); });
+        };
+
+
+        /**
+         * Converts an AsciiMath expression into MathML string.
+         * @param {function(string)} callback Callback function called with the MathML
+         * string after it is produced.
+         * @param {string} math Expression in AsciiMath.
+         */
+        cvox.MathJaxExternalUtil.asciiMathToMml = function (callback, math) {
+            cvox.MathJaxExternalUtil.convertToMml(
+                callback, math, 'math/asciimath', 'AsciiMath', 'asciimathError',
+                MathJax.InputJax.AsciiMath.AM.parseMath);
+        };
+    </script>
+    <script type="text/javascript" mathjax="1">// Copyright 2014 The Chromium Authors. All rights reserved.
+        // Use of this source code is governed by a BSD-style license that can be
+        // found in the LICENSE file.
+
+        /**
+         * @fileoverview Bridge to MathJax functions from the ChromeVox content script.
+         *
+         */
+
+        if (typeof (goog) != 'undefined' && goog.provide) {
+            goog.provide('cvox.MathJax');
+        }
+
+        if (typeof (goog) != 'undefined' && goog.require) {
+            goog.require('cvox.Api');
+            goog.require('cvox.MathJaxExternalUtil');
+        }
+
+        (function () {
+            /**
+             * The channel between the page and content script.
+             * @type {MessageChannel}
+             */
+            var channel_ = new MessageChannel();
+
+
+            /**
+             * @constructor
+             */
+            cvox.MathJax = function () {
+            };
+
+
+            /**
+             * Initializes message channel in Chromevox.
+             */
+            cvox.MathJax.initMessage = function () {
+                channel_.port1.onmessage = function (evt) {
+                    cvox.MathJax.execMessage(evt.data);
+                };
+                window.postMessage('cvox.MathJaxPortSetup', '*', [channel_.port2]);
+            };
+
+
+            /**
+             * Post a message to Chromevox.
+             * @param {string} cmd The command to be executed in Chromevox.
+             * @param {string} callbackId A string representing the callback id.
+             * @param {Object<string, *>} args Dictionary of arguments.
+             */
+            cvox.MathJax.postMessage = function (cmd, callbackId, args) {
+                channel_.port1.postMessage({ 'cmd': cmd, 'id': callbackId, 'args': args });
+            };
+
+
+            /**
+             * Executes a command for an incoming message.
+             * @param {{cmd: string, id: string, args: string}} msg A
+             *     serializable message.
+             */
+            cvox.MathJax.execMessage = function (msg) {
+                var args = msg.args;
+                switch (msg.cmd) {
+                    case 'Active':
+                        cvox.MathJax.isActive(msg.id);
+                        break;
+                    case 'AllJax':
+                        cvox.MathJax.getAllJax(msg.id);
+                        break;
+                    case 'AsciiMathToMml':
+                        cvox.MathJax.asciiMathToMml(msg.id, args.alt, args.id);
+                        break;
+                    case 'InjectScripts':
+                        cvox.MathJax.injectScripts();
+                        break;
+                    case 'ConfWikipedia':
+                        cvox.MathJax.configMediaWiki();
+                        break;
+                    case 'RegSig':
+                        cvox.MathJax.registerSignal(msg.id, args.sig);
+                        break;
+                    case 'TexToMml':
+                        cvox.MathJax.texToMml(msg.id, args.alt, args.id);
+                        break;
+                }
+            };
+
+
+            /**
+             * Compute the MathML representation for all currently available MathJax
+             * nodes.
+             * @param {string} callbackId A string representing the callback id.
+             */
+            cvox.MathJax.getAllJax = function (callbackId) {
+                cvox.MathJaxExternalUtil.getAllJax(
+                    cvox.MathJax.getMathmlCallback_(callbackId));
+            };
+
+
+            /**
+             * Registers a callback for a particular Mathjax signal.
+             * @param {string} callbackId A string representing the callback id.
+             * @param {string} signal The Mathjax signal on which to fire the callback.
+             */
+            cvox.MathJax.registerSignal = function (callbackId, signal) {
+                cvox.MathJaxExternalUtil.registerSignal(
+                    cvox.MathJax.getMathmlCallback_(callbackId), signal);
+            };
+
+
+            /**
+             * Constructs a callback that posts a string with the MathML representation of
+             * a MathJax element to ChromeVox.
+             * @param {string} callbackId A string representing the callback id.
+             * @return {function(Node, string)} A function taking a Mathml node and an id
+             * string.
+             * @private
+             */
+            cvox.MathJax.getMathmlCallback_ = function (callbackId) {
+                return function (mml, id) {
+                    cvox.MathJax.postMessage('NodeMml', callbackId,
+                        { 'mathml': mml, 'elementId': id });
+                };
+            };
+
+
+            /**
+             * Inject a minimalistic MathJax script into a page for LaTeX translation.
+             */
+            cvox.MathJax.injectScripts = function () {
+                cvox.MathJaxExternalUtil.injectConfigScript();
+                cvox.MathJaxExternalUtil.injectLoadScript();
+            };
+
+
+            /**
+             * Loads configurations for MediaWiki pages (e.g., Wikipedia).
+             */
+            cvox.MathJax.configMediaWiki = function () {
+                cvox.MathJaxExternalUtil.configMediaWiki();
+            };
+
+
+            /**
+             * Translates a LaTeX expressions into a MathML element.
+             * @param {string} callbackId A string representing the callback id.
+             * @param {string} tex The LaTeX expression.
+             * @param {string} cvoxId A string representing the cvox id for the node.
+             */
+            cvox.MathJax.texToMml = function (callbackId, tex, cvoxId) {
+                cvox.MathJaxExternalUtil.texToMml(
+                    function (mml) {
+                        cvox.MathJax.getMathmlCallback_(callbackId)(mml, cvoxId);
+                    },
+                    tex);
+            };
+
+
+            /**
+             * Translates an AsciiMath expression into a MathML element.
+             * @param {string} callbackId A string representing the callback id.
+             * @param {string} asciiMath The AsciiMath expression.
+             * @param {string} cvoxId A string representing the cvox id for the node.
+             */
+            cvox.MathJax.asciiMathToMml = function (callbackId, asciiMath, cvoxId) {
+                cvox.MathJaxExternalUtil.asciiMathToMml(
+                    function (mml) {
+                        cvox.MathJax.getMathmlCallback_(callbackId)(mml, cvoxId);
+                    },
+                    asciiMath);
+            };
+
+
+            /**
+             * Check if MathJax is injected in the page.
+             * @param {string} callbackId A string representing the callback id.
+             */
+            cvox.MathJax.isActive = function (callbackId) {
+                cvox.MathJax.postMessage(
+                    'Active', callbackId,
+                    { 'status': cvox.MathJaxExternalUtil.isActive() });
+            };
+
+
+            // Initializing the bridge.
+            cvox.MathJax.initMessage();
+
+        })();
+    </script>
+    <script type="text/javascript" cvoxapi="1"
+        chromevoxscriptbase="https://ssl.gstatic.com/accessibility/javascript/ext/">// Copyright 2014 The Chromium Authors. All rights reserved.
+            // Use of this source code is governed by a BSD-style license that can be
+            // found in the LICENSE file.
+
+            /**
+             * @fileoverview Shared util methods between api.js and api_implementation.js
+             * for doing common tasks such as passing node references between page script
+             * and ChromeVox.
+             */
+
+            if (typeof (goog) != 'undefined' && goog.provide) {
+                goog.provide('cvox.ApiUtil');
+            }
+
+
+            if (!window['cvox']) {
+                window['cvox'] = {};
+            }
+
+            /**
+             * @constructor
+             */
+            cvox.ApiUtils = function () {
+            };
+
+            /**
+             * The next id to use for the cvoxid attribute that we add to elements
+             * in order to be able to find them from the content script.
+             * @type {number}
+             */
+            cvox.ApiUtils.nextCvoxId_ = 1;
+
+            /**
+             * Makes a serializable reference to a node.
+             * If the node or its parent has an ID, reference it directly. Otherwise,
+             * add a temporary cvoxid attribute. This has a corresponding method in
+             * api_implementation.js to decode this and return a node.
+             * @param {Node} targetNode The node to reference.
+             * @return {Object} A serializable node reference.
+             */
+            cvox.ApiUtils.makeNodeReference = function (targetNode) {
+                if (targetNode.id && document.getElementById(targetNode.id) == targetNode) {
+                    return { 'id': targetNode.id };
+                } else if (targetNode instanceof HTMLElement) {
+                    var cvoxid = cvox.ApiUtils.nextCvoxId_;
+                    targetNode.setAttribute('cvoxid', cvoxid);
+                    cvox.ApiUtils.nextCvoxId_ = (cvox.ApiUtils.nextCvoxId_ + 1) % 100;
+                    return { 'cvoxid': cvoxid };
+                } else if (targetNode.parentElement) {
+                    var parent = targetNode.parentElement;
+                    var childIndex = -1;
+                    for (var i = 0; i < parent.childNodes.length; i++) {
+                        if (parent.childNodes[i] == targetNode) {
+                            childIndex = i;
+                            break;
+                        }
+                    }
+                    if (childIndex >= 0) {
+                        var cvoxid = cvox.ApiUtils.nextCvoxId_;
+                        parent.setAttribute('cvoxid', cvoxid);
+                        cvox.ApiUtils.nextCvoxId_ = (cvox.ApiUtils.nextCvoxId_ + 1) % 100;
+                        return { 'cvoxid': cvoxid, 'childIndex': childIndex };
+                    }
+                }
+                throw 'Cannot reference node: ' + targetNode;
+            };
+
+            /**
+             * Retrieves a node from its serializable node reference.
+             *
+             * @param {Object} nodeRef A serializable reference to a node.
+             * @return {Node} The node on the page that this object refers to.
+             */
+            cvox.ApiUtils.getNodeFromRef = function (nodeRef) {
+                if (nodeRef['id']) {
+                    return document.getElementById(nodeRef['id']);
+                } else if (nodeRef['cvoxid']) {
+                    var selector = '*[cvoxid="' + nodeRef['cvoxid'] + '"]';
+                    var element = document.querySelector(selector);
+                    if (element && element.removeAttribute) {
+                        element.removeAttribute('cvoxid');
+                    }
+                    if (nodeRef['childIndex'] != null) {
+                        return element.childNodes[nodeRef['childIndex']];
+                    } else {
+                        return element;
+                    }
+                }
+                throw 'Bad node reference: ' + cvox.ChromeVoxJSON.stringify(nodeRef);
+            };
+        </script>
+    <script type="text/javascript" cvoxapi="1"
+        chromevoxscriptbase="https://ssl.gstatic.com/accessibility/javascript/ext/">// Copyright 2014 The Chromium Authors. All rights reserved.
+            // Use of this source code is governed by a BSD-style license that can be
+            // found in the LICENSE file.
+
+            /**
+             * @fileoverview Public APIs to enable web applications to communicate
+             * with ChromeVox.
+             */
+
+            if (typeof (goog) != 'undefined' && goog.provide) {
+                goog.provide('cvox.Api');
+                goog.provide('cvox.Api.Math');
+            }
+
+            if (typeof (goog) != 'undefined' && goog.require) {
+                goog.require('cvox.ApiImplementation');
+            }
+
+            (function () {
+                /*
+                 * Private data and methods.
+                 */
+
+                /**
+                 * The name of the port between the content script and background page.
+                 * @type {string}
+                 * @const
+                 */
+                var PORT_NAME = 'cvox.Port';
+
+                /**
+                 * The name of the message between the page and content script that sets
+                 * up the bidirectional port between them.
+                 * @type {string}
+                 * @const
+                 */
+                var PORT_SETUP_MSG = 'cvox.PortSetup';
+
+                /**
+                 * The message between content script and the page that indicates the
+                 * connection to the background page has been lost.
+                 * @type {string}
+                 * @const
+                 */
+                var DISCONNECT_MSG = 'cvox.Disconnect';
+
+                /**
+                 * The channel between the page and content script.
+                 * @type {MessageChannel}
+                 */
+                var channel;
+
+                /**
+                 * Tracks whether or not the ChromeVox API should be considered active.
+                 * @type {boolean}
+                 */
+                var isActive_ = false;
+
+                /**
+                 * The next id to use for async callbacks.
+                 * @type {number}
+                 */
+                var nextCallbackId_ = 1;
+
+                /**
+                 * Map from callback ID to callback function.
+                 * @type {Object<number, function(*)>}
+                 */
+                var callbackMap_ = {};
+
+                /**
+                 * Internal function to connect to the content script.
+                 */
+                function connect_() {
+                    if (channel) {
+                        // If there is already an existing channel, close the existing ports.
+                        channel.port1.close();
+                        channel.port2.close();
+                        channel = null;
+                    }
+
+                    channel = new MessageChannel();
+                    channel.port1.onmessage = function (event) {
+                        if (event.data == DISCONNECT_MSG) {
+                            channel = null;
+                        }
+                        try {
+                            var message = JSON.parse(event.data);
+                            if (message['id'] && callbackMap_[message['id']]) {
+                                callbackMap_[message['id']](message);
+                                delete callbackMap_[message['id']];
+                            }
+                        } catch (e) {
+                        }
+                    };
+                    window.postMessage(PORT_SETUP_MSG, '*', [channel.port2]);
+                }
+
+                /**
+                 * Internal function to send a message to the content script and
+                 * call a callback with the response.
+                 * @param {Object} message A serializable message.
+                 * @param {function(*)} callback A callback that will be called
+                 *     with the response message.
+                 */
+                function callAsync_(message, callback) {
+                    var id = nextCallbackId_;
+                    nextCallbackId_++;
+                    if (message['args'] === undefined) {
+                        message['args'] = [];
+                    }
+                    message['args'] = [id].concat(message['args']);
+                    callbackMap_[id] = callback;
+                    channel.port1.postMessage(JSON.stringify(message));
+                }
+
+                /**
+                 * Wraps callAsync_ for sending speak requests.
+                 * @param {Object} message A serializable message.
+                 * @param {Object=} properties Speech properties to use for this utterance.
+                 * @private
+                 */
+                function callSpeakAsync_(message, properties) {
+                    var callback = null;
+                    /* Use the user supplied callback as callAsync_'s callback. */
+                    if (properties && properties['endCallback']) {
+                        callback = properties['endCallback'];
+                    }
+                    callAsync_(message, callback);
+                };
+
+
+                /*
+                 * Public API.
+                 */
+
+                if (!window['cvox']) {
+                    window['cvox'] = {};
+                }
+                var cvox = window.cvox;
+
+
+                /**
+                 * ApiImplementation - this is only visible if all the scripts are compiled
+                 * together like in the Android case. Otherwise, implementation will remain
+                 * null which means communication must happen over the bridge.
+                 *
+                 * @type {*}
+                 */
+                var implementation = null;
+                if (typeof (cvox.ApiImplementation) != 'undefined') {
+                    implementation = cvox.ApiImplementation;
+                }
+
+
+                /**
+                 * @constructor
+                 */
+                cvox.Api = function () {
+                };
+
+                /**
+                 * Internal-only function, only to be called by the content script.
+                 * Enables the API and connects to the content script.
+                 */
+                cvox.Api.internalEnable = function () {
+                    isActive_ = true;
+                    if (!implementation) {
+                        connect_();
+                    }
+                    var event = document.createEvent('UIEvents');
+                    event.initEvent('chromeVoxLoaded', true, false);
+                    document.dispatchEvent(event);
+                };
+
+                /**
+                 * Internal-only function, only to be called by the content script.
+                 * Disables the ChromeVox API.
+                 */
+                cvox.Api.internalDisable = function () {
+                    isActive_ = false;
+                    channel = null;
+                    var event = document.createEvent('UIEvents');
+                    event.initEvent('chromeVoxUnloaded', true, false);
+                    document.dispatchEvent(event);
+                };
+
+                /**
+                 * Returns true if ChromeVox is currently running. If the API is available
+                 * in the JavaScript namespace but this method returns false, it means that
+                 * the user has (temporarily) disabled ChromeVox.
+                 *
+                 * You can listen for the 'chromeVoxLoaded' event to be notified when
+                 * ChromeVox is loaded.
+                 *
+                 * @return {boolean} True if ChromeVox is currently active.
+                 */
+                cvox.Api.isChromeVoxActive = function () {
+                    if (implementation) {
+                        return isActive_;
+                    }
+                    return !!channel;
+                };
+
+                /**
+                 * Speaks the given string using the specified queueMode and properties.
+                 *
+                 * @param {string} textString The string of text to be spoken.
+                 * @param {number=} queueMode Valid modes are 0 for flush; 1 for queue.
+                 * @param {Object=} properties Speech properties to use for this utterance.
+                 */
+                cvox.Api.speak = function (textString, queueMode, properties) {
+                    if (!cvox.Api.isChromeVoxActive()) {
+                        return;
+                    }
+
+                    if (implementation) {
+                        implementation.speak(textString, queueMode, properties);
+                    } else {
+                        var message = {
+                            'cmd': 'speak',
+                            'args': [textString, queueMode, properties]
+                        };
+                        callSpeakAsync_(message, properties);
+                    }
+                };
+
+                /**
+                 * Speaks a description of the given node.
+                 *
+                 * @param {Node} targetNode A DOM node to speak.
+                 * @param {number=} queueMode Valid modes are 0 for flush; 1 for queue.
+                 * @param {Object=} properties Speech properties to use for this utterance.
+                 */
+                cvox.Api.speakNode = function (targetNode, queueMode, properties) {
+                    if (!cvox.Api.isChromeVoxActive()) {
+                        return;
+                    }
+
+                    if (implementation) {
+                        implementation.speak(cvox.DomUtil.getName(targetNode),
+                            queueMode, properties);
+                    } else {
+                        var message = {
+                            'cmd': 'speakNodeRef',
+                            'args': [cvox.ApiUtils.makeNodeReference(targetNode), queueMode,
+                                properties]
+                        };
+                        callSpeakAsync_(message, properties);
+                    }
+                };
+
+                /**
+                 * Stops speech.
+                 */
+                cvox.Api.stop = function () {
+                    if (!cvox.Api.isChromeVoxActive()) {
+                        return;
+                    }
+
+                    if (implementation) {
+                        implementation.stop();
+                    } else {
+                        var message = {
+                            'cmd': 'stop'
+                        };
+                        channel.port1.postMessage(JSON.stringify(message));
+                    }
+                };
+
+                /**
+                 * Plays the specified earcon sound.
+                 *
+                 * @param {string} earcon An earcon name.
+                 * Valid names are:
+                 *   ALERT_MODAL
+                 *   ALERT_NONMODAL
+                 *   BUTTON
+                 *   CHECK_OFF
+                 *   CHECK_ON
+                 *   EDITABLE_TEXT
+                 *   INVALID_KEYPRESS
+                 *   LINK
+                 *   LISTBOX
+                 *   LIST_ITEM
+                 *   OBJECT_CLOSE
+                 *   OBJECT_OPEN
+                 *   OBJECT_SELECT
+                 *   PAGE_START_LOADING
+                 *   RECOVER_FOCUS
+                 *   SKIP
+                 *   WRAP
+                 *   WRAP_EDGE
+                 * This list may expand over time.
+                 */
+                cvox.Api.playEarcon = function (earcon) {
+                    if (!cvox.Api.isChromeVoxActive()) {
+                        return;
+                    }
+                    if (implementation) {
+                        implementation.playEarcon(earcon);
+                    } else {
+                        var message = {
+                            'cmd': 'playEarcon',
+                            'args': [earcon]
+                        };
+                        channel.port1.postMessage(JSON.stringify(message));
+                    }
+                };
+
+                /**
+                 * Synchronizes ChromeVox's internal cursor to the targetNode.
+                 * Note that this will NOT trigger reading unless given the
+                 * optional argument; it is for setting the internal ChromeVox
+                 * cursor so that when the user resumes reading, they will be
+                 * starting from a reasonable position.
+                 *
+                 * @param {Node} targetNode The node that ChromeVox should be synced to.
+                 * @param {boolean=} speakNode If true, speaks out the node.
+                 */
+                cvox.Api.syncToNode = function (targetNode, speakNode) {
+                    if (!cvox.Api.isChromeVoxActive() || !targetNode) {
+                        return;
+                    }
+
+                    if (implementation) {
+                        implementation.syncToNode(targetNode, speakNode);
+                    } else {
+                        var message = {
+                            'cmd': 'syncToNodeRef',
+                            'args': [cvox.ApiUtils.makeNodeReference(targetNode), speakNode]
+                        };
+                        channel.port1.postMessage(JSON.stringify(message));
+                    }
+                };
+
+                /**
+                 * Retrieves the current node and calls the given callback function with it.
+                 *
+                 * @param {Function} callback The function to be called.
+                 */
+                cvox.Api.getCurrentNode = function (callback) {
+                    if (!cvox.Api.isChromeVoxActive() || !callback) {
+                        return;
+                    }
+
+                    if (implementation) {
+                        callback(cvox.ChromeVox.navigationManager.getCurrentNode());
+                    } else {
+                        callAsync_({ 'cmd': 'getCurrentNode' }, function (response) {
+                            callback(cvox.ApiUtils.getNodeFromRef(response['currentNode']));
+                        });
+                    }
+                };
+
+                /**
+                 * Specifies how the targetNode should be spoken using an array of
+                 * NodeDescriptions.
+                 *
+                 * @param {Node} targetNode The node that the NodeDescriptions should be
+                 * spoken using the given NodeDescriptions.
+                 * @param {Array<Object>} nodeDescriptions The Array of
+                 * NodeDescriptions for the given node.
+                 */
+                cvox.Api.setSpeechForNode = function (targetNode, nodeDescriptions) {
+                    if (!cvox.Api.isChromeVoxActive() || !targetNode || !nodeDescriptions) {
+                        return;
+                    }
+                    targetNode.setAttribute('cvoxnodedesc', JSON.stringify(nodeDescriptions));
+                };
+
+                /**
+                 * Simulate a click on an element.
+                 *
+                 * @param {Element} targetElement The element that should be clicked.
+                 * @param {boolean} shiftKey Specifies if shift is held down.
+                 */
+                cvox.Api.click = function (targetElement, shiftKey) {
+                    if (!cvox.Api.isChromeVoxActive() || !targetElement) {
+                        return;
+                    }
+
+                    if (implementation) {
+                        cvox.DomUtil.clickElem(targetElement, shiftKey, true);
+                    } else {
+                        var message = {
+                            'cmd': 'clickNodeRef',
+                            'args': [cvox.ApiUtils.makeNodeReference(targetElement), shiftKey]
+                        };
+                        channel.port1.postMessage(JSON.stringify(message));
+                    }
+                };
+
+                /**
+                 * Returns the build info.
+                 *
+                 * @param {function(string)} callback Function to receive the build info.
+                 */
+                cvox.Api.getBuild = function (callback) {
+                    if (!cvox.Api.isChromeVoxActive() || !callback) {
+                        return;
+                    }
+                    if (implementation) {
+                        callback(cvox.BuildInfo.build);
+                    } else {
+                        callAsync_({ 'cmd': 'getBuild' }, function (response) {
+                            callback(response['build']);
+                        });
+                    }
+                };
+
+                /**
+                 * Returns the ChromeVox version, a string of the form 'x.y.z',
+                 * like '1.18.0'.
+                 *
+                 * @param {function(string)} callback Function to receive the version.
+                 */
+                cvox.Api.getVersion = function (callback) {
+                    if (!cvox.Api.isChromeVoxActive() || !callback) {
+                        return;
+                    }
+                    if (implementation) {
+                        callback(cvox.ChromeVox.version + '');
+                    } else {
+                        callAsync_({ 'cmd': 'getVersion' }, function (response) {
+                            callback(response['version']);
+                        });
+                    }
+                };
+
+                /**
+                 * Returns the key codes of the ChromeVox modifier keys.
+                 * @param {function(Array<number>)} callback Function to receive the keys.
+                 */
+                cvox.Api.getCvoxModifierKeys = function (callback) {
+                    if (!cvox.Api.isChromeVoxActive() || !callback) {
+                        return;
+                    }
+                    if (implementation) {
+                        callback(cvox.KeyUtil.cvoxModKeyCodes());
+                    } else {
+                        callAsync_({ 'cmd': 'getCvoxModKeys' }, function (response) {
+                            callback(response['keyCodes']);
+                        });
+                    }
+                };
+
+                /**
+                 * Returns if ChromeVox will handle this key event.
+                 * @param {Event} keyEvent A key event.
+                 * @param {function(boolean)} callback Function to receive the keys.
+                 */
+                cvox.Api.isKeyShortcut = function (keyEvent, callback) {
+                    if (!callback) {
+                        return;
+                    }
+                    if (!cvox.Api.isChromeVoxActive()) {
+                        callback(false);
+                        return;
+                    }
+                    /* TODO(peterxiao): Ignore these keys until we do this in a smarter way. */
+                    var KEY_IGNORE_LIST = [
+                        37, /* Left arrow. */
+                        39  /* Right arrow. */
+                    ];
+                    if (KEY_IGNORE_LIST.indexOf(keyEvent.keyCode) && !keyEvent.altKey &&
+                        !keyEvent.shiftKey && !keyEvent.ctrlKey && !keyEvent.metaKey) {
+                        callback(false);
+                        return;
+                    }
+
+                    if (implementation) {
+                        var keySeq = cvox.KeyUtil.keyEventToKeySequence(keyEvent);
+                        callback(cvox.ChromeVoxKbHandler.handlerKeyMap.hasKey(keySeq));
+                    } else {
+                        var strippedKeyEvent = {};
+                        /* Blacklist these props so we can safely stringify. */
+                        var BLACK_LIST_PROPS = ['target', 'srcElement', 'currentTarget', 'view'];
+                        for (var prop in keyEvent) {
+                            if (BLACK_LIST_PROPS.indexOf(prop) === -1) {
+                                strippedKeyEvent[prop] = keyEvent[prop];
+                            }
+                        }
+                        var message = {
+                            'cmd': 'isKeyShortcut',
+                            'args': [strippedKeyEvent]
+                        };
+                        callAsync_(message, function (response) {
+                            callback(response['isHandled']);
+                        });
+                    }
+                };
+
+                /**
+                 * Set key echoing on key press.
+                 * @param {boolean} keyEcho Whether key echoing should be on or off.
+                 */
+                cvox.Api.setKeyEcho = function (keyEcho) {
+                    if (!cvox.Api.isChromeVoxActive()) {
+                        return;
+                    }
+
+                    if (implementation) {
+                        implementation.setKeyEcho(keyEcho);
+                    } else {
+                        var message = {
+                            'cmd': 'setKeyEcho',
+                            'args': [keyEcho]
+                        };
+                        channel.port1.postMessage(JSON.stringify(message));
+                    }
+                };
+
+                /**
+                 * Exports the ChromeVox math API.
+                 * TODO(dtseng, sorge): Requires more detailed documentation for class
+                 * members.
+                 * @constructor
+                 */
+                cvox.Api.Math = function () { };
+
+                // TODO(dtseng, sorge): This need not be specific to math; once speech engine
+                // stabilizes, we can generalize.
+                // TODO(dtseng, sorge): This API is way too complicated; consolidate args
+                // when re-thinking underlying representation. Some of the args don't have a
+                // well-defined purpose especially for a caller.
+                /**
+                 * Defines a math speech rule.
+                 * @param {string} name Rule name.
+                 * @param {string} dynamic Dynamic constraint annotation. In the case of a
+                 *      math rule it consists of a domain.style string.
+                 * @param {string} action An action of rule components.
+                 * @param {string} prec XPath or custom function constraining match.
+                 * @param {...string} constraints Additional constraints.
+                 */
+                cvox.Api.Math.defineRule =
+                    function (name, dynamic, action, prec, constraints) {
+                        if (!cvox.Api.isChromeVoxActive()) {
+                            return;
+                        }
+                        var constraintList = Array.prototype.slice.call(arguments, 4);
+                        var args = [name, dynamic, action, prec].concat(constraintList);
+                        if (implementation) {
+                            implementation.Math.defineRule.apply(implementation.Math, args);
+                        } else {
+                            var msg = { 'cmd': 'Math.defineRule', args: args };
+                            channel.port1.postMessage(JSON.stringify(msg));
+                        }
+                    };
+
+                cvox.Api.internalEnable();
+
+                /**
+                 * NodeDescription
+                 * Data structure for holding information on how to speak a particular node.
+                 * NodeDescriptions will be converted into NavDescriptions for ChromeVox.
+                 *
+                 * The string data is separated into context, text, userValue, and annotation
+                 * to enable ChromeVox to speak each of these with the voice settings that
+                 * are consistent with how ChromeVox normally presents information about
+                 * nodes to users.
+                 *
+                 * @param {string} context Contextual information that the user should
+                 * hear first which is not part of main content itself. For example,
+                 * the user/date of a given post.
+                 * @param {string} text The main content of the node.
+                 * @param {string} userValue Anything that the user has entered.
+                 * @param {string} annotation The role and state of the object.
+                 */
+                // TODO (clchen, deboer): Put NodeDescription into externs for developers
+                // building ChromeVox extensions.
+                cvox.NodeDescription = function (context, text, userValue, annotation) {
+                    this.context = context ? context : '';
+                    this.text = text ? text : '';
+                    this.userValue = userValue ? userValue : '';
+                    this.annotation = annotation ? annotation : '';
+                };
+            })();
+        </script>
+    <script type="text/javascript" cvoxapi="1"
+        chromevoxscriptbase="https://ssl.gstatic.com/accessibility/javascript/ext/">// Copyright 2010 Google Inc.
+            //
+            // Licensed under the Apache License, Version 2.0 (the "License");
+            // you may not use this file except in compliance with the License.
+            // You may obtain a copy of the License at
+            //
+            //      http://www.apache.org/licenses/LICENSE-2.0
+            //
+            // Unless required by applicable law or agreed to in writing, software
+            // distributed under the License is distributed on an "AS IS" BASIS,
+            // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            // See the License for the specific language governing permissions and
+            // limitations under the License.
+
+            /**
+             * @fileoverview The script chooser loads any page specific enhancement
+             * scripts that are applicable to the page the user is currently on.
+             *
+             * @author clchen@google.com (Charles Chen)
+             */
+
+            var ENHANCEMENT_SCRIPTS_BASE_URL =
+                'https://ssl.gstatic.com/accessibility/javascript/ext/';
+
+            cvox.SiteSpecificEnhancements = {};
+
+            /**
+             * Loads site specific enhancement scripts.
+             */
+            cvox.SiteSpecificEnhancements.load = function () {
+                // Append this to the end of a remote URL to force it to bypass the cache
+                // and be redownloaded.
+                // For gstatic releases, make sure this is '' since gstatic won't accept '?'
+                // params.
+                var forceRedownload = '';
+
+                function loadScripts(srcs) {
+                    if (!srcs)
+                        return;
+                    var src = srcs[0];
+                    var theScript = document.createElement('script');
+                    theScript.type = 'text/javascript';
+                    if (src.substr(0, 4) == 'http') {
+                        theScript.src = src + forceRedownload;
+                    } else if (ENHANCEMENT_SCRIPTS_BASE_URL) {
+                        theScript.src = ENHANCEMENT_SCRIPTS_BASE_URL + src + forceRedownload;
+                    } else {
+                        theScript.src = chrome.extension.getURL(src) + forceRedownload;
+                    }
+                    if (srcs.length > 1) {
+                        theScript.onload = function () {
+                            loadScripts(srcs.slice(1));
+                        };
+                    }
+                    document.head.appendChild(theScript);
+                }
+
+                function loadScript(src) {
+                    loadScripts([src]);
+                }
+
+                var currentURL = document.baseURI;
+
+                if (currentURL.indexOf('https://mail.google.com/mail/') == 0 &&
+                    currentURL.indexOf('?ui=2&view=btop&ver=1s4dmo0mhdqld#') != -1) {
+                    // GMail chat box
+                    loadScript('gtalk.js');
+                } else if ((currentURL.indexOf('http://books.google.com/ebooks?id=') == 0) &&
+                    (currentURL.indexOf('&printsec=frontcover&output=reader') != -1)) {
+                    // Google Books Web Reader
+                    loadScripts(['booksReader_api.js', 'booksReader.js']);
+                } else if (currentURL.indexOf('http://news.google.com/') == 0) {
+                    // News
+                    loadScript('news.js');
+                } else if (currentURL.indexOf(
+                    'https://gcomm.talkgadget.google.com/talkgadget/gcomm') == 0) {
+                    // GComm
+                    loadScript('gcomm.js');
+                } else if (currentURL.indexOf('http://iplayif.com/story?') == 0) {
+                    // Parchment z-machine
+                    loadScript('parchment.js');
+                } else if (currentURL.indexOf('http://www.google.com/reader') == 0) {
+                    // Google Reader
+                    loadScript('reader.js');
+                } else if (currentURL.indexOf('https://www.google.com/calendar') == 0 ||
+                    currentURL.indexOf('http://www.google.com/calendar') == 0) {
+                    // Calendar
+                    loadScript('calendar.js');
+                }
+            };
+
+            cvox.SiteSpecificEnhancements.load();
+        </script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container-fluid">
+            
+            <ul class="nav justify-content-center"><a href="/" style="">home</a><a href="/resume" style="">resume</a><a
+                    href="/sinesthesia" style="">sinesthesia</a><a href="/lessons" aria-current="page" class="active"
+                    style="color: rgb(241, 91, 42);">music lessons</a></ul>
+            <div class="jumbotron">
+                <h2>Music Lessons</h2>
+                <p>During the Covid pandemic and social distancing I am beginning to offer remote music lessons for
+                    aspriing pianists and guitar players. More content coming soon! Feel free to contact me if you have
+                    any questions.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form class="md-form form-group" _lpchecked="1">
+                        <h2>Contact Me</h2>
+                        <div class="form-group"><label for="name">Name</label>
+                            
+                            <div class="field"><input type="text" name="name" class="form-control" placeholder="Name"
+                                    value=""
+                                    style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                            </div>
+                        </div>
+                        <div class="form-group"><label for="address">Email</label>
+                            <div class="field"><input type="text" name="address" class="form-control"
+                                    placeholder="Your Email Address" value=""></div>
+                        </div>
+                        <div class="form-group"><label for="subject">Subject</label>
+                            <div class="field"><input type="text" name="subject" class="form-control"
+                                    placeholder="Subject" value=""></div>
+                        </div>
+                        <div class="form-group md-form"><label for="message">Message</label>
+                            <div class="field"><textarea name="message" class="form-control align-text-top"
+                                    placeholder="Message"></textarea></div>
+                        </div><button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+            <footer class="footer">
+
+                <div class="row justify-content-center"><a href="https://github.com/marqode" class="social"><svg
+                            aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
+                            class="svg-inline--fa fa-github fa-w-16 fa-2x " role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                            <path fill="currentColor"
+                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                            </path>
+                        </svg></a><a href="https://www.linkedin.com/in/marc-bucchieri-352b9877/" class="social"><svg
+                            aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin"
+                            class="svg-inline--fa fa-linkedin fa-w-14 fa-2x " role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                            </path>
+                        </svg></a><a href="https://www.instagram.com/marcbucchieri/" class="social"><svg
+                            aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                            class="svg-inline--fa fa-instagram fa-w-14 fa-2x " role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                            </path>
+                        </svg></a></div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="/bundle.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init("user_mfpcvyoq4MOyqRds58kpH")</script>
+</body>
+
+</html>
