@@ -1,11 +1,11 @@
-<!-- Proposed code of https://marqode.github.io/ -->
-<!-- Accessibility findings:
-- Color contrast - https://www.w3.org/WAI/perspective-videos/contrast/
-- Semantic structure of headings - https://www.w3.org/WAI/tutorials/page-structure/headings/
-- Descriptive links - https://www.w3.org/TR/WCAG20-TECHS/H30.html -->
-<!-- Accessibility tools
-- ChromeVox screen reader
-- Color contrast tested with WebAIM Contrast Checker at https://webaim.org/resources/contrastchecker/ -->
+<!-- Current code at https://marqode.github.io/ -->
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -513,11 +513,11 @@
         <div class="container-fluid">
             <ul class="nav justify-content-center">
                 
-                <a aria-current="page" class="active" href="/" style="color: rgb(211, 63, 13);">home</a>
-                <!-- home link - Darken color to style="color: rgb(211, 63, 13);" for sufficient contrast -->
-                <!-- home link - Add aria-selected="true" to link that represents current page -->
+                <a aria-current="page" class="active" href="/" style="color: rgb(241, 91, 42);">home</a>
+                    
+                    
 
-                <a href="/resume">resume</a><!-- Darken color of a style to #006FE6 for sufficient contrast -->
+                <a href="/resume">resume</a>
 
                 <a href="/sinesthesia">sinesthesia</a><a href="/lessons">music lessons</a></ul>
             <div class="jumbotron">
@@ -534,7 +534,7 @@
                     <div class="col-md-4">
                         <div class="card"><img src="/dacb25cefb5f75946797444715905196.jpeg" class="card-img-top"
                                 alt="Upwork Profile">
-                            <h2 class="card-title">Freelance Work</h2><!-- Change h5 to h2 and style h2 as font-size: 1.25rem; -->
+                            <h5 class="card-title">Freelance Work</h5>
                             <p class="card-text">I work primarily with web development clients on projects ranging from
                                 social media platforms to healthcare systems.</p><a
                                 href="https://www.upwork.com/o/profiles/users/~0159865d28fe088b77/"
@@ -544,7 +544,7 @@
                     <div class="col-md-4">
                         <div class="card"><img src="/6f12ac936c509c3d82ff1f49f5034b73.png" class="card-img-top"
                                 alt="House Floorplan">
-                            <h2 class="card-title">CAD Models</h2><!-- Change h5 to h2 and style h2 as font-size: 1.25rem; -->
+                            <h5 class="card-title">CAD Models</h5>
                             <p class="card-text">I like modeling things, from small complex parts to building designs
                                 and floor plans. Happy contributor to many a project involving intricate mechanics and
                                 rapid prototyping.</p>
@@ -553,7 +553,7 @@
                     <div class="col-md-4">
                         <div class="card"><img src="/2c9d1f8bb263f1e7353ecc4f615b9f71.png" class="card-img-top"
                                 alt="STEM Activity Site">
-                            <h2 class="card-title">STEM Activity Site</h2><!-- Change h5 to h2 and style h2 as font-size: 1.25rem; -->
+                            <h5 class="card-title">STEM Activity Site</h5>
                             <p class="card-text">This website helps teachers from rural areas to find STEM activities
                                 for their classes! The table is populated by educators and allows for comprehensive
                                 search filters and user comments.</p><a
@@ -565,24 +565,24 @@
             </div>
             <footer class="footer">
                 <div class="row justify-content-center">
-                    <a href="https://github.com/marqode" class="social" title="github">
-                        <!-- Darken color of a style to #757575 for sufficient contrast -->
-                        <!-- Describe the icon in teh title tag -->
+                    <a href="https://github.com/marqode" class="social">
+                    
+                    
                     <svg
-                            aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" aria-labelledby="github" 
+                            aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
                             class="svg-inline--fa fa-github fa-w-16 fa-2x " role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                             <path fill="currentColor"
                                 d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                            </path>\
-                        </svg></a><a href="https://www.linkedin.com/in/marc-bucchieri-352b9877/" class="social" title="linkedin"><svg
+                            </path>
+                        </svg></a><a href="https://www.linkedin.com/in/marc-bucchieri-352b9877/" class="social"><svg
                             aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin"
                             class="svg-inline--fa fa-linkedin fa-w-14 fa-2x " role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path fill="currentColor"
                                 d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
                             </path>
-                        </svg></a><a href="https://www.instagram.com/marcbucchieri/" class="social" title="instagram"><svg
+                        </svg></a><a href="https://www.instagram.com/marcbucchieri/" class="social"><svg
                             aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
                             class="svg-inline--fa fa-instagram fa-w-14 fa-2x " role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
