@@ -1,15 +1,15 @@
-<!-- Current code at https://marqode.github.io/ -->
+<!-- Proposed code for https://marqode.github.io/ -->
 
-
-
-
-
+<!-- Responsiveness findings
+- .card class should be 100% wide to scale to full width on single column display.
+- Add other col-* Bootsrap classes to allow columns to stack on narrow display.
+- Oddly, when tested with Google Inspect, the columns don't stack and scale on small devices. I'll keep looking into that. -->
 
 
 <!doctype html>
 <html lang="en">
 
-<head>
+<head >
     <meta charset="utf-8">
     <title>Marc Bucchieri</title>
     <script
@@ -508,82 +508,82 @@
     <link href="/main.2c06facc5793b571773c.css" rel="stylesheet">
 </head>
 
-<body>
+<body >
     <div id="app">
         <div class="container-fluid">
-
+            <!-- Refer to the recommendations for the home page for the links in the top navigation -->
             <ul class="nav justify-content-center"><a aria-current="page" class="active" href="/"
-                style="color: rgb(241, 91, 42);">home</a><a href="/resume">resume</a><a
-                href="/sinesthesia">sinesthesia</a><a href="/lessons">music lessons</a></ul>
-        <div class="jumbotron">
-            <h1>Marc Bucchieri</h1>
-            <p>Thanks for visiting my site! I am an educator, freelance developer, and mechanical designer, outdoor
-                adventurer and node in the human network. I created this space to house my portfolio and some
-                personal projects. I'm fascinated by the fundamental science behind art and music and the ways
-                people connect and learn from one another. Feel free to reach out if you'd like to collaborate on a
-                project!</p><br>
-            <p>Check out the cards below for some of my recent works.</p>
-        </div>
+                    style="color: rgb(241, 91, 42);">home</a><a href="/resume">resume</a><a
+                    href="/sinesthesia">sinesthesia</a><a href="/lessons">music lessons</a></ul>
+            <div class="jumbotron">
+                <h1>Marc Bucchieri</h1>
+                <p>Thanks for visiting my site! I am an educator, freelance developer, and mechanical designer, outdoor
+                    adventurer and node in the human network. I created this space to house my portfolio and some
+                    personal projects. I'm fascinated by the fundamental science behind art and music and the ways
+                    people connect and learn from one another. Feel free to reach out if you'd like to collaborate on a
+                    project!</p><br>
+                <p>Check out the cards below for some of my recent works.</p>
+            </div>
+
+            <!-- Modify Bootstrap for a 100% wide card, border-left: -1; and styled footer -->
+            <style>
+                .card {
+                    max-width: 100%;
+                    margin: 20px;
+                    padding: 0;
+                    border-left: -1;
+                }
             
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+                .card-footer {
+                    padding: .75rem 1.25rem;
+                    background-color: #fff;
+                    border-top: 0px solid #fff;
+                }
+            </style>
+            
             <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
-                        <div class="card"><img src="/dacb25cefb5f75946797444715905196.jpeg" class="card-img-top"
-                                alt="Upwork Profile">
+                <div class="row justify-content-center card-group"> <!-- Utilize full Bootstrap card features to match card height and button alignment -->
+                    <div class="card">
+                        <img class="card-img-top" src="/dacb25cefb5f75946797444715905196.jpeg" alt="Upwork Profile">
+                        <div class="card-body">
                             <h5 class="card-title">Freelance Work</h5>
                             <p class="card-text">I work primarily with web development clients on projects ranging from
-                                social media platforms to healthcare systems.</p><a
-                                href="https://www.upwork.com/o/profiles/users/~0159865d28fe088b77/"
-                                class="btn btn-primary">View My Profile</a>
+                                social media platforms to healthcare systems.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://www.upwork.com/o/profiles/users/~0159865d28fe088b77/"
+                                class="btn btn-primary btn-block">View My Profile</a>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card"><img src="/6f12ac936c509c3d82ff1f49f5034b73.png" class="card-img-top"
-                                alt="House Floorplan">
+                    <div class="card">
+                        <img class="card-img-top" src="/6f12ac936c509c3d82ff1f49f5034b73.png" alt="House Floorplan">
+                        <div class="card-body">
                             <h5 class="card-title">CAD Models</h5>
-                            <p class="card-text">I like modeling things, from small complex parts to building designs
-                                and floor plans. Happy contributor to many a project involving intricate mechanics and
-                                rapid prototyping.</p>
+                            <p class="card-text">I like modeling things, from small complex parts to building designs and
+                                floor plans. Happy contributor to many a project involving intricate mechanics and rapid
+                                prototyping.</p>
+                        </div>
+                        <div class="card-footer">
+                            &nbsp;
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card"><img src="/2c9d1f8bb263f1e7353ecc4f615b9f71.png" class="card-img-top"
-                                alt="STEM Activity Site">
+                    <div class="card">
+                        <img class="card-img-top" src="/2c9d1f8bb263f1e7353ecc4f615b9f71.png" alt="STEM Activity Site">
+                        <div class="card-body">
                             <h5 class="card-title">STEM Activity Site</h5>
-                            <p class="card-text">This website helps teachers from rural areas to find STEM activities
-                                for their classes! The table is populated by educators and allows for comprehensive
-                                search filters and user comments.</p><a
-                                href="https://www.whitemountainscience.org/stem-resource-site"
-                                class="btn btn-primary">Visit the Site</a>
+                            <p class="card-text">This website helps teachers from rural areas to find STEM activities for
+                                their classes! The table is populated by educators and allows for comprehensive search
+                                filters and user comments.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://www.whitemountainscience.org/stem-resource-site"
+                                class="btn btn-primary btn-block">Visit the STEM Activity Site</a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-            
-            
-            
             <footer class="footer">
-                
+                <!-- Refer to the recommendations for the home page for the links in the footer -->
                 <div class="row justify-content-center"><a href="https://github.com/marqode" class="social"><svg
                             aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
                             class="svg-inline--fa fa-github fa-w-16 fa-2x " role="img"
